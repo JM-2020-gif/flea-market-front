@@ -1,17 +1,22 @@
+import styles from '@/styles/Header.module.css';
 export default function Header() {
     return (
-        <header>
-            <div>Logo</div>
+        <header className={styles.header}>
+            <div className={styles.logo}>
+                <a>Logo Flea Market</a>
+            </div>
             <div>
                 <nav>
                     <ul>
                         <li>
-                            <a href="">All categories</a>
+                            <a>All categories</a>
                         </li>
                     </ul>
                 </nav>
             </div>
-            <div>Log in</div>
+            <div className={styles.login}>
+                <a>Log in</a>
+            </div>
         </header>
     );
 }
