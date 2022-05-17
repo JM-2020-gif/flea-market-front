@@ -1,15 +1,17 @@
+import Link from 'next/link';
 import styles from '@/styles/Header.module.css';
+
 export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <a>Logo Flea Market</a>
+                <Link href="/">FLEA MARKET</Link>
             </div>
             <div>
                 <nav>
                     <ul>
                         <li>
-                            <a>All categories</a>
+                            <Link href="/">All categories</Link>
                         </li>
                     </ul>
                 </nav>
