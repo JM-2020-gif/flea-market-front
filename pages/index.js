@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link'
 import styles from '@/styles/Home.module.css';
 import Layout from '@/components/Layout';
 import CategoryCard from '@/components/CategoryCard';
@@ -9,10 +10,15 @@ export default function Home({ categories }) {
 
     return (
         <Layout title="Flea Market | Home">
-            {categories.data.lenght === 0 && <h3>No categories found</h3>}
-            {categories.data.map((category) => (
-                <CategoryCard key={category.id} category={category} />
-            ))}
+            <section className={styles.viewCategories}>
+                {categories.data.lenght === 0 && <h3>No categories found</h3>}
+                {categories.data.map((category) => (
+                    <CategoryCard key={category.id} category={category} />
+                ))}
+                <Link href='/categories'>
+                    <a className={styles.linkToAll}>View all categories</a> 
+                </Link>
+            </section>
         </Layout>
     );
 }
