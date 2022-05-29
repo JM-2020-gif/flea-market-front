@@ -1,22 +1,33 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Link from 'next/link'
+import Link from 'next/link';
 import styles from '@/styles/Home.module.css';
 import Layout from '@/components/Layout';
 import CategoryCard from '@/components/CategoryCard';
 import { API_URL } from '@/config/index';
 
 export default function Home({ categories }) {
-
+    console.log(categories);
     return (
         <Layout title="Flea Market | Home">
-            <section className={styles.viewCategories}>
-                {categories.data.lenght === 0 && <h3>No categories found</h3>}
-                {categories.data.map((category) => (
-                    <CategoryCard key={category.id} category={category} />
-                ))}
-                <Link href='/categories'>
-                    <a className={styles.linkToAll}>View all categories</a> 
+            <section className={styles.bannerContainer}>
+                <Image
+                    src='/BannerPhoto.jpg'
+                    alt='Category image'
+                    layout='fill'
+                    objectFit='cover'
+                />
+                <h1 className={styles.textBanner}>SAVE MONEY<br/>SAVE THE PLANET<br/>BUY USED!<br/>Your store to buy and sell your products</h1>
+            </section>
+            <section className={styles.categorySection}>
+                <div className={styles.viewCategories}>
+                    {categories.data.length === 0 && <h3>No categories found</h3>}
+                    {categories.data.map((category) => (
+                        <CategoryCard key={category.id} category={category} />
+                    ))}
+                </div>
+                <Link href="/categories">
+                    <a className={`primaryButton ${styles.viewAllButton}`} >View all categories</a>
                 </Link>
             </section>
         </Layout>
@@ -24,7 +35,7 @@ export default function Home({ categories }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(`${API_URL}/api/categories`);
+    const res = await fetch(`${API_URL}/api/categories?populate[0]=media`);
     const categories = await res.json();
 
     return {

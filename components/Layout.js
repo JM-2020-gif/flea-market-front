@@ -20,6 +20,6 @@ export default function Layout({ title, description, keywords, children }) {
 
 Layout.defaultProps = {
     title: 'Flea Market',
-    description: 'Icelandic Flea Market for everyone! But and sell!',
+    description: 'Icelandic Flea Market for everyone! Buy and sell!',
     keywords: 'ecommerce, buy, sell, market, second-hand, thrift',
 };
