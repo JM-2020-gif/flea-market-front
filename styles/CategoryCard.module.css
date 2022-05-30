@@ -17,12 +17,11 @@
 .categoryLink {
     font-size: 1.5rem;
 
+    padding: 12px;
     margin-top: 12px;
 }
 
 a.categoryLink:hover {
     color: white;
     background-color: rgb(19, 19, 19);
-    border-color: black;
-    padding: 5px;
 }

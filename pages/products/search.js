@@ -1,14 +1,16 @@
 import qs from 'qs'
 import Layout from '@/components/Layout'
 import { API_URL } from '@/config/index'
+import { useRouter } from 'next/router'
 import styles from '@/styles/SearchPage.module.css'
-import { getStaticProps } from 'pages'
 import ProductCard from '@/components/ProductCard'
 
 export default function SearchPage({ matchedProducts }) {
+    const router = useRouter()
     return (
         <Layout title='Flea Market Search'>
-            <p className={styles.blue}>Search Page</p>
+            <h1>Search results for: {`'${router.query.term}'`} </h1>
+            {matchedProducts.data.length === 0 && <h3>No products found</h3>}
             {matchedProducts.data.map(product => (
                 <ProductCard key={product.id} product={product} />
             ))}

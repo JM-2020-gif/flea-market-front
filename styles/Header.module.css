@@ -4,7 +4,7 @@
     align-items: center;
     background: #fff;
     color: #333;
-    height: 60px;
+    height: 90px;
     padding: 0 30px;
     box-shadow: 0 2px 5px rgba(110, 25, 25, 0.1);
 }
@@ -30,10 +30,11 @@
     color: rgb(41, 13, 168);
     font-size: 35px;
     text-transform: uppercase;
+    font-family: 'SonsieOne';
 }
 
 .logo a {
-    color: rgb(58, 18, 218);
+    color: rgb(14, 14, 14);
 }
 
 .login a:hover {

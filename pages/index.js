@@ -7,7 +7,7 @@ import CategoryCard from '@/components/CategoryCard';
 import { API_URL } from '@/config/index';
 
 export default function Home({ categories }) {
-    console.log(categories);
+
     return (
         <Layout title="Flea Market | Home">
             <section className={styles.bannerContainer}>
@@ -17,7 +17,7 @@ export default function Home({ categories }) {
                     layout='fill'
                     objectFit='cover'
                 />
-                <h1 className={styles.textBanner}>SAVE MONEY<br/>SAVE THE PLANET<br/>BUY USED!<br/>Your store to buy and sell your products</h1>
+                <h1 className={styles.textBanner}>SAVE MONEY<br/>SAVE THE PLANET<br/>BUY USED!<br/>Your store to buy and sell<br/> your products</h1>
             </section>
             <section className={styles.categorySection}>
                 <div className={styles.viewCategories}>

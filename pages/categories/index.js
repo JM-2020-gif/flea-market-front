@@ -3,6 +3,7 @@ import CategoryCard from '@/components/CategoryCard';
 import { API_URL } from '@/config/index';
 
 export default function AllCategories({ categories }) {
+
     return (
         <Layout title="Flea Market | All Categories">
             <h1>All Categories</h1>
@@ -15,7 +16,7 @@ export default function AllCategories({ categories }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(`${API_URL}/api/categories`);
+    const res = await fetch(`${API_URL}/api/categories?populate[0]=media`);
     const categories = await res.json();
 
     return {

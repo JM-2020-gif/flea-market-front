@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <Link href="/">FLEA MARKET</Link>
+                <Link href="/">SECOND-HAND STORE</Link>
             </div>
             <div>
                 <nav>
@@ -17,7 +17,7 @@ export default function Header() {
                     </ul>
                 </nav>
             </div>
-            <SearchForm/>
+            <SearchForm />
             <div className={styles.login}>
                 <a>Log in</a>
             </div>
