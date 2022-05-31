@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import styles from '@/styles/Header.module.css';
 import SearchForm from '@/components/SearchForm';
+import { menuItems } from '@/config/navigation'
+import MenuItem from '@/components/MenuItem'
 
 export default function Header() {
     return (
@@ -9,11 +11,11 @@ export default function Header() {
                 <Link href="/">SECOND-HAND STORE</Link>
             </div>
             <div>
-                <nav>
-                    <ul>
-                        <li>
-                            <Link href="/">All categories</Link>
-                        </li>
+                <nav className={styles.navMenu}>
+                    <ul className={styles.navList}>
+                        {menuItems.map((item, index) => (
+                            <MenuItem key={index} item={item}/>
+                        ))}
                     </ul>
                 </nav>
             </div>

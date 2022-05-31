@@ -13,8 +13,8 @@ export default function SearchForm() {
     }
 
     return (
-       <form onSubmit={handleSubmit}>
-           <input type="text" title="Search Products" placeholder="Search products" onChange={(e) => setTerm(e.target.value)} value={term} />
+       <form className={styles.form} onSubmit={handleSubmit}>
+           <input className={styles.input} type="text" title="Search Products" placeholder="Search products" onChange={(e) => setTerm(e.target.value)} value={term} />
        </form>
     )
 }

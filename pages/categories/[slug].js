@@ -3,7 +3,6 @@ import ProductCard from '@/components/ProductCard';
 import { API_URL } from '@/config/index';
 
 export default function Category({ category }) {
-    console.log(category);
 
     return (
         <Layout title={`Flea Market | ${category.attributes.name}`}>

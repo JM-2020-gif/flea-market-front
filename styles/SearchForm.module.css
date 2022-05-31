@@ -1,3 +1,27 @@
-.red {
-    color:red;
+.input {
+    width: 32px;
+    color: transparent;
+    font-size: 1.1rem;
+    border: 1px solid transparent;
+    /** Icon Search**/
+    background: url('/IconSearch.svg') no-repeat left;
+    background-position: 7px 4px;
+    background-size: 20px;
+
+    transition: width 175ms ease-in;
+
+    padding: 3px 8px 3px 0px;
+}
+.input::placeholder {
+    color: transparent
+}
+.input:focus {
+    width: 320px;
+    color: inherit;
+    border-color: black;
+
+    padding: 3px 8px 3px 32px;
+}
+.input:focus::placeholder {
+    color: gray;
 }

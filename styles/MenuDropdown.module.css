@@ -1,0 +1,26 @@
+.dropdownMenu {
+    width: max-content;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 8px;
+
+    background-color: white;
+
+    list-style-type: none;
+    z-index: 100;
+}
+.dropdownItem + .dropdownItem {
+    margin-top: 10px;
+}
+.dropdownItem:hover {
+    background-color: lightblue;
+}
+.itemLink {
+    display: inline-block;
+    padding: 5px;
+}

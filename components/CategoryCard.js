@@ -3,7 +3,7 @@ import Image from 'next/image';
 import styles from '@/styles/CategoryCard.module.css';
 
 export default function CategoryCard({ category }) {
-    console.log(category)
+
     return (
         <div className={styles.cardWrapper}>
             <div className={styles.imgContainer}>
