@@ -1,12 +1,32 @@
 .header {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
+    align-items: stretch;
     background: #fff;
     color: #333;
-    height: 90px;
-    padding: 0 30px;
+    /*height: 90px;*/
+    padding: 15px 30px;
     box-shadow: 0 2px 5px rgba(110, 25, 25, 0.1);
+}
+.logo {
+    color: rgb(41, 13, 168);
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'SonsieOne';
+    margin-right: 5px;
+}
+
+.logo a {
+    color: rgb(14, 14, 14);
+}
+
+.menuContainer {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
 }
 .navMenu {
     display: flex;
@@ -23,57 +43,54 @@
     list-style-type: none;
 }
 
-/*.header a {
-    color: rgb(19, 19, 19);
-    margin-right: 20px;
-}
-
-.header a:hover {
-    color: rgb(177, 207, 29);
-    font-size: 40px;
-}
-.header ul {
+.profile {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    list-style: none;
-    font-size: 30px;
-}*/
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
 
-.logo {
-    color: rgb(41, 13, 168);
-    font-size: 35px;
-    text-transform: uppercase;
-    font-family: 'SonsieOne';
-    margin-right: 25px;
+    margin-left: 25px;
+}
+.loginButton {
+    align-items: center;
+}
+.profile a + a {
+    margin-left: 10px;
 }
 
-.logo a {
-    color: rgb(14, 14, 14);
-}
-
-.login a:hover {
-    color:aqua;
-    font-size: 25px;
-}
-
-@media (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     .header {
         flex-direction: column;
-        height: auto;
     }
-
-    /*.header ul {
-        margin: 20px 0;
+    .menuContainer {
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .logo {
         text-align: center;
     }
+    .navMenu {
+        order: 1;
+        margin: 18px 0px;
+    }
+    .profile {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-    .header a {
-        margin-right: 0;
-    }*/
+        margin-left: 0px;
+    }
+    .profile a + a {
+        margin-left: 0px;
+    }
+    .loginButton {
+        width: 100%;
+        text-align: center;
+        background-color: black;
+        color: white;
 
-    .logo {
-        margin: 20px 0;
+        padding: 12px 32px;
     }
 }

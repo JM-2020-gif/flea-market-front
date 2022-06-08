@@ -6,7 +6,7 @@
 }
 
 .dropdownMenu {
-    width: max-content;
+    min-width: 150px;
     position: absolute;
 
     flex-direction: column;
@@ -20,13 +20,23 @@
     list-style-type: none;
     z-index: 100;
 }
+.dropdownItem {
+    font-size: 18px;
+}
 .dropdownItem + .dropdownItem {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .dropdownItem:hover {
-    background-color: lightblue;
+    background-color: black;
+    color: white;
 }
 .itemLink {
     display: inline-block;
     padding: 5px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .dropdownMenu {
+        position: relative;
+    }
 }
