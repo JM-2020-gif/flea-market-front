@@ -11,9 +11,5 @@ export const menuItems = [
                 slug: '/categories/furniture'
             }
         ]
-    },
-    {
-        title: 'Contact',
-        slug: '/contact'
     }
 ]

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import styles from '@/styles/MenuDropdown.module.css'
 
-export default function MenuDropdown({ submenu }) {
+export default function MenuDropdown({ submenu, dropdownState }) {
     return (
-        <ul className={styles.dropdownMenu}>
+        <ul className={`${styles.dropdownMenu} ${dropdownState ? styles.show : styles.hidde}`}>
             {submenu.map((item, index) => (
                 <li key={index} className={styles.dropdownItem} >
                     <Link href={item.slug}>
