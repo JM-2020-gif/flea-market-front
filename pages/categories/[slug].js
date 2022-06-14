@@ -7,7 +7,7 @@ export default function Category({ category }) {
     return (
         <Layout title={`Flea Market | ${category.attributes.name}`}>
             <h1>{category.attributes.name}</h1>
-            <section>
+            <section className='productsSection'>
                 {category.attributes.products.data.map(product => (
                     <ProductCard key={product.id} product={product}/>
                 ))}

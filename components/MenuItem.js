@@ -18,7 +18,7 @@ export default function MenuItem({ item }) {
                     <button className={styles.hasSubmenu} onClick={toggleSubmenu}>
                         {item.title}
                     </button>
-                    <MenuDropdown submenu={item.submenu} dropdownState={dropdownState} />
+                    <MenuDropdown submenu={item.submenu} dropdownState={dropdownState}/>
                 </>
             ) : (
                 <Link href={item.slug}>

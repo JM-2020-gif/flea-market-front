@@ -19,8 +19,8 @@ export default function Home({ categories }) {
                 />
                 <h1 className={styles.textBanner}>SAVE MONEY<br/>SAVE THE PLANET<br/>BUY USED!<br/>Your store to buy and sell<br/> your products</h1>
             </section>
-            <section className={styles.categorySection}>
-                <div className={styles.viewCategories}>
+            <section className='categorySection'>
+                <div className='viewCategories'>
                     {categories.data.length === 0 && <h3>No categories found</h3>}
                     {categories.data.map((category) => (
                         <CategoryCard key={category.id} category={category} />

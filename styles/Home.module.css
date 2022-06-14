@@ -1,7 +1,7 @@
 /** BANNER **/
 .bannerContainer {
     position: relative;
-    width: 100%;
+    width: 100vw;
     min-height: 350px;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,7 @@
     align-items: flex-start;
 
     padding: 25px 50px;
+    margin-left: -30px;
 }
 .bannerContainer span {
     z-index: -10;
@@ -23,19 +24,6 @@
     padding: 18px;
 }
 
-/** CATEGORIES **/
-.categorySection {
-    margin: 50px 0px;
-}
-.viewCategories {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-
-    margin-bottom: 32px;
-}
 .viewAllButton {
     display: block !important;
     width: fit-content;

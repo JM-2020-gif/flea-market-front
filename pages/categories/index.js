@@ -7,10 +7,14 @@ export default function AllCategories({ categories }) {
     return (
         <Layout title="Flea Market | All Categories">
             <h1>All Categories</h1>
-            {categories.data.lenght === 0 && <h3>No categories found</h3>}
-            {categories.data.map((category) => (
-                <CategoryCard key={category.id} category={category} />
-            ))}
+            <section className='categorySection'>
+                <div className='viewCategories'>
+                    {categories.data.lenght === 0 && <h3>No categories found</h3>}
+                    {categories.data.map((category) => (
+                        <CategoryCard key={category.id} category={category} />
+                    ))}
+                </div>
+            </section>
         </Layout>
     );
 }

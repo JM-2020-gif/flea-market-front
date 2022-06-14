@@ -1,5 +1,17 @@
-.cardWrapper {
-    border: 1px solid black;
-    max-width: 400px;
-    margin: 25px auto;
+.productWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+  
+    width: 275px;
+    border: 1px solid var(--solitude-grey);
+  
+    margin: 16px;
 }
+.imgContainer {
+    position: relative;
+    max-width: 275px;
+    height: 345px;
+}
+
