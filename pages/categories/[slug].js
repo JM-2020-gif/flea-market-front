@@ -6,12 +6,11 @@ export default function Category({ category }) {
 
     return (
         <Layout title={`Flea Market | ${category.attributes.name}`}>
-            <h1>{category.attributes.name}</h1>
+            <h1 className='pageTitle'>{category.attributes.name}</h1>
             <section className='productsSection'>
                 {category.attributes.products.data.map(product => (
                     <ProductCard key={product.id} product={product}/>
-                ))}
-                
+                ))}          
             </section>
         </Layout>
     );

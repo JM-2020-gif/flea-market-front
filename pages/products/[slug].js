@@ -4,7 +4,7 @@ import { API_URL } from '@/config/index';
 export default function Product({ product }) {
     return (
         <Layout title={`Flea Market | ${product.attributes.name}`}>
-            <h1>{product.attributes.name}</h1>
+            <h1 className='pageTitle'>{product.attributes.name}</h1>
             <section></section>
         </Layout>
     );

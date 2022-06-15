@@ -5,13 +5,48 @@
     align-items: stretch;
   
     width: 275px;
-    border: 1px solid var(--solitude-grey);
+    border: 1px solid black;
   
     margin: 16px;
 }
 .imgContainer {
     position: relative;
-    max-width: 275px;
+    width: 100%;
     height: 345px;
 }
+/** PRODUCT INFO **/
+.info {
+    flex-grow: 2;
 
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.first, .name, .third {
+    padding: 0px 6px;
+}
+.name, .price {
+    font-family: 'Comfortaa', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
+        Droid Sans, Helvetica Neue, sans-serif;
+    font-weight: bold;
+}
+/** FIRST ROW **/
+.first {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+
+    border-bottom: 1px solid black;
+}
+.name {
+    margin: 15px 0px;
+}
+.third {
+    border-top: 1px solid black;
+    margin-top: auto;
+}
+.price {
+    text-align: right;
+}

@@ -9,11 +9,13 @@ export default function SearchPage({ matchedProducts }) {
     const router = useRouter()
     return (
         <Layout title='Flea Market Search'>
-            <h1>Search results for: {`'${router.query.term}'`} </h1>
-            {matchedProducts.data.length === 0 && <h3>No products found</h3>}
-            {matchedProducts.data.map(product => (
-                <ProductCard key={product.id} product={product} />
-            ))}
+            <h1 className='pageTitle'>Search results for: {`'${router.query.term}'`} </h1>
+            <section className='productsSection'>
+                {matchedProducts.data.length === 0 && <h3>No products found</h3>}
+                {matchedProducts.data.map(product => (
+                    <ProductCard key={product.id} product={product} />
+                ))}
+            </section>
         </Layout>
     )
 }
