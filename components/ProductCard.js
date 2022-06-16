@@ -9,7 +9,7 @@ export default function ProductCard({ product }) {
             <a className={styles.productWrapper}>
                 <div className={styles.imgContainer}>
                     <Image
-                        src={product.attributes.media.data[0].attributes.formats.small.url}
+                        src={product.attributes.media.data ? product.attributes.media.data[0].attributes.formats.small.url : '/product-placeholder.png'}
                         alt="product image"
                         layout="fill"
                         objectFit="cover"
