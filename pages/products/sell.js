@@ -45,7 +45,7 @@ export default function SellPage() {
     return (
         <Layout title='Flea Market | Sell'>
             <h1 className='pageTitle'>Sell a product</h1>
-            <form onSubmit={handleSubmit}>
+            <form className={styles.form} onSubmit={handleSubmit}>
                 <label htmlFor='name'>Name</label>
                 <input type='text' id='name' name='name' value={values.name} onChange={handleInputChange}/>
 

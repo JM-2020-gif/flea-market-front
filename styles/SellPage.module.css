@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+
+.imgContainer {
+    position: relative;
+    max-width: 137px;
+    height: 173px;
+}
+.image {
+    border-radius: 4px;
+}

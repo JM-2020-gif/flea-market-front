@@ -37,6 +37,10 @@ export default function Header() {
                 <Link href="/">
                     <a className={styles.loginButton}>Log in</a>
                 </Link>
+                <Link href="/products/sell">
+                    <a className={styles.sellButton}>Sell!</a>
+                </Link>
+
             </div>
         </header>
     );

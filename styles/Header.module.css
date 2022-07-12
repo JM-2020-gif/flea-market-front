@@ -66,7 +66,7 @@
 
     margin-left: 25px;
 }
-.loginButton {
+.loginButton, .sellButton {
     align-items: center;
 }
 .profile a + a {
@@ -115,13 +115,16 @@
     .profile a + a {
         margin-left: 0px;
     }
-    .loginButton {
+    .loginButton, .sellButton {
         width: 100%;
         text-align: center;
         background-color: black;
         color: white;
 
         padding: 12px 32px;
+    }
+    .sellButton {
+        margin-top: 8px;
     }
 }
 
